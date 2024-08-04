@@ -1,25 +1,127 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 40px 120px;
     color: white;
-}
-.nav-logo{
-    font-family: Orbitron;
+  }
+  
+  .nav-logo {
+    font-family: Orbitron, sans-serif; /* Ensure font is available */
     font-size: 42px;
     font-weight: 500;
-}
-.nav-menu{
+  }
+  
+  .nav-bar {
+    /* Add styles for nav-bar if needed */
+  }
+  
+  .nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    margin-right: 20px; /* Adjust spacing as needed */
+  }
+  
+  .nav-menu a {
+    color: white;
+    text-decoration: none;
     font-size: 18px;
-    gap: 90px;
-}
-.nav-contact{
-    border-radius: 50px;
-    padding: 10px 38px;
-    background: #fff;
-    color: #262626;
-}
+  }
+  
+  .nav-menu a:hover {
+    color: #ff4081; /* Add hover effect */
+  }
+
+  /* Base styles for the nav-menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Hide nav-menu on mobile and show hamburger menu */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none; /* Hide the menu */
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
+  /* Styles for the hamburger icon */
+  .hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  .hamburger div:nth-child(1) {
+    top: 0;
+  }
+  
+  .hamburger div:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hamburger div:nth-child(3) {
+    bottom: 0;
+  }
+  
+  /* Show nav-menu when hamburger is clicked */
+  .menu-open {
+    display: none; /* Hide menu by default */
+  }
+  
+  .menu-open.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on your design */
+    right: 20px; /* Adjust based on your design */
+    background: #333; /* Background color for mobile menu */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .menu-open.show a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+  
+  /* Rotate hamburger lines into a cross when menu is open */
+  .menu-open-button.open div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  
+  .menu-open-button.open div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-open-button.open div:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 50%;
+  }

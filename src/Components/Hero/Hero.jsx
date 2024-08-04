@@ -19,22 +19,31 @@ export const Hero = () => {
                 <li>
                     <div ontouchstart="">
                         <div className="button">
-                            
-                            <a href="#"><img className="icons" src={iconsInstagram} alt="" /> Instagram</a>
+                            <a href="#">
+                                <span class= "icon"><img className="icons" src={iconsInstagram} alt="" /></span> 
+                                <span class= "text" >Instagram</span>
+                                
+                            </a>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div ontouchstart="">
                         <div className="button">
-                             <a href="#"><img className="icons" src={iconsDiscord} alt="" /> Discord</a>
+                            <a href="#">
+                                <span class= "icon"><img className="icons" src={iconsDiscord} alt="" /></span>
+                                <span class= "text">Discord</span>
+                            </a>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div ontouchstart="">
                         <div className="button">
-                             <a href="#"><img className="icons" src={iconGmail} alt="" /> Email</a>
+                             <a href="#">
+                                <span class= "icon"><img className="icons" src={iconGmail} alt="" /></span>
+                                <span class= "text">Email</span>
+                             </a>
                         </div>
                     </div>
                 </li>

@@ -1,0 +1,22 @@
+.image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: white;
+  overflow: hidden; /* Ensure any overflow is hidden */
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./assets/image1.png'); /* Use the correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(50%); /* Adjust brightness here */
+  z-index: -1; /* Ensure it is behind the content */
+}
