@@ -9,3 +9,13 @@
     padding-left: 5%;
     padding-bottom: 1%;
 }
+.aboutUs {
+    height: 20%;
+    width: 84%;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    background-color: #b5edc2;
+    border-radius: 25px;
+}

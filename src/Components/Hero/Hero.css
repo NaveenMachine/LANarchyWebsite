@@ -6,7 +6,7 @@
     color:#FFF;
     font-size: 110px;
     font-weight: 500;
-    line-height: 130px;
+    line-height: 120%;
     /*color: #FDFBD4;*/
     text-align: center;
 }
@@ -27,7 +27,7 @@ li {
 }
 body{
     text-align:center;
-    background-color:#ffcc8e;
+    background-color: grey;
 }
   
 .button{
