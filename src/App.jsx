@@ -12,6 +12,7 @@ import meeleeVid from './assets/meeleeVideo.mp4'
 export const App = () => {
   const [heroCount, setHeroCount] = useState(0); 
   const [playStatus, setPlayStatus] = useState(true);
+  const [aboutCount, setAboutCount] = useState(0);
 
   return (
     <div>
@@ -25,7 +26,7 @@ export const App = () => {
         <Hero className="caption"/> 
       </div>
       
-      <AboutUs/>
+      <AboutUs aboutCount = {aboutCount}/>
       <Officers/>
       <Footer/>
     </div>
