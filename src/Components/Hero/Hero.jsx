@@ -17,7 +17,7 @@ export const Hero = () => {
         <div className="contact-list">
             <ul>
                 <li>
-                    <div ontouchstart="">
+                    <div onTouchStart="">
                         <div className="button">
                             <a href="#">
                                 <span class= "icon"><img className="icons" src={iconsInstagram} alt="" /></span> 
@@ -28,7 +28,7 @@ export const Hero = () => {
                     </div>
                 </li>
                 <li>
-                    <div ontouchstart="">
+                    <div onTouchStart="">
                         <div className="button">
                             <a href="#">
                                 <span class= "icon"><img className="icons" src={iconsDiscord} alt="" /></span>
@@ -38,7 +38,7 @@ export const Hero = () => {
                     </div>
                 </li>
                 <li>
-                    <div ontouchstart="">
+                    <div onTouchStart="">
                         <div className="button">
                              <a href="#">
                                 <span class= "icon"><img className="icons" src={iconGmail} alt="" /></span>
