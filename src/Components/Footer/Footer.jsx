@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <div className='Footer'>
         <img src={image1} alt="" className='logo'/>
+        <p>@ 2024 LANarchy. All rights reserved.</p>
         <ul>
             <li>
                 <a href="#">
