@@ -21,7 +21,9 @@
   filter: brightness(50%); 
   z-index: -1; 
 } */
-
+body {
+  background-color: magenta;
+}
 video {
   z-index: -1;
   filter: brightness(50%);

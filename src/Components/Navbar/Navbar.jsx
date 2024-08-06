@@ -19,7 +19,7 @@ const Navbar = () => {
             <div></div>
         </div>
         <div className={`menu-open ${isOpen ? 'show' : ''}`}>
-            <a href="#">Simultaneous Multi-console Display</a>
+            <a href="#">AI Multi-console Display</a>
             {/* Add more links as needed */}
         </div>
     </div>

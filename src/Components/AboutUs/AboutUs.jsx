@@ -17,8 +17,11 @@ export const AboutUs = ({aboutCount}) => {
         <h1 className='aboutTitle'>Who We Are</h1>
         <div className='container'>
             <p className='aboutTxt'>Welcome to our Video Game Club! <div> We are a passionate community of gamers who come together to share our love for all things gaming. Our club meets regularly to discuss our favorite games, exchange tips and tricks, and enjoy multiplayer sessions. We host a variety of activities, including tournaments, game reviews, and themed nights.</div> Stay updated with the latest industry trends and releases with us. Join our dynamic and engaging community today and take your gaming experience to the next level!</p>
-            <img className='photo' src={image2} alt="" />
+            
+            <img className='photo' src={image1} alt="" />
         </div>
+        
+            
     </div>
   )
 }
