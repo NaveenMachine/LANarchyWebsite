@@ -4,4 +4,10 @@
   font-family: Poppins;
 }
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  
+}
