@@ -40,7 +40,7 @@ export const Hero = () => {
                 <li>
                     <div onTouchStart="">
                         <div className="button">
-                             <a href="#">
+                             <a href="mailto:LANarchyOSU@gmail.com">
                                 <span class= "icon"><img className="icons" src={iconGmail} alt="" /></span>
                                 <span class= "text">Email</span>
                              </a>

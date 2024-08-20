@@ -16,7 +16,7 @@ export const AboutUs = ({aboutCount}) => {
     <div className = 'aboutUs'>
         <h1 className='aboutTitle'>Who We Are</h1>
         <div className='container'>
-            <p className='aboutTxt'>Welcome to our Video Game Club! <div> We are a passionate community of gamers who come together to share our love for all things gaming. Our club meets regularly to discuss our favorite games, exchange tips and tricks, and enjoy multiplayer sessions. We host a variety of activities, including tournaments, game reviews, and themed nights.</div> Stay updated with the latest industry trends and releases with us. Join our dynamic and engaging community today and take your gaming experience to the next level!</p>
+            <p className='aboutTxt'>Welcome to LANarchy! <div> At LANarchy, our core mission is to cultivate a vibrant gaming community on campus. We host LAN parties and tournaments, featuring popular titles like Mario Kart, Halo, and Smash Bros.</div>We’re film believers in the power of local multiplayer gaming to bring people together and forge genuine connections. Whether you're carting a console across campus or just bringing yourself, you'll find a warm welcome and a home at LANarchy.</p>
             
             <img className='photo' src={image1} alt="" />
         </div>

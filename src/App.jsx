@@ -7,6 +7,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import Officers from "./Components/Officers/Officers";
 import Slider from "./Components/Slider/Slider"
 import Footer from "./Components/Footer/Footer";
+import Registration from "./Components/Registration/Registration";
 import image2 from './assets/image2.jpg'
 import image3 from './assets/image3.jpg'
 import image4 from './assets/image4.jpg'
@@ -44,7 +45,9 @@ export const App = () => {
         <Slider slides={slides}/>
       </div>
       <Officers/>
+      <Registration/>
       <Footer/>
+      
     </div>
     
   )

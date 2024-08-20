@@ -14,7 +14,7 @@ const Footer = () => {
                 <li>
                     <span onTouchStart="">
                         <span className="buttons">
-                            <a href="#">
+                            <a href="https://www.instagram.com/lanarchyosu">
                                 <span ><img className="pics" src={iconsInstagram} alt="" /></span> 
                                 
                                 
@@ -25,7 +25,7 @@ const Footer = () => {
                 <li>
                     <span onTouchStart="">
                         <span className="buttons">
-                            <a href="#">
+                            <a href="https://discord.gg/xfDzKmFzCT">
                                 <span><img className="pics" src={iconsDiscord} alt="" /></span>
                                 
                             </a>
@@ -35,7 +35,7 @@ const Footer = () => {
                 <li>
                     <span onTouchStart="">
                         <span className="buttons">
-                             <a href="#">
+                             <a href="mailto:LANarchyOSU@gmail.com">
                                 <span ><img className="pics" src={iconGmail} alt="" /></span>
                                 
                              </a>
