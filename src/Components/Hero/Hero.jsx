@@ -19,7 +19,7 @@ export const Hero = () => {
                 <li>
                     <div onTouchStart="">
                         <div className="button">
-                            <a href="#">
+                            <a href="https://www.instagram.com/lanarchyosu">
                                 <span class= "icon"><img className="icons" src={iconsInstagram} alt="" /></span> 
                                 <span class= "text" >Instagram</span>
                                 
@@ -30,7 +30,7 @@ export const Hero = () => {
                 <li>
                     <div onTouchStart="">
                         <div className="button">
-                            <a href="#">
+                            <a href="https://discord.gg/xfDzKmFzCT">
                                 <span class= "icon"><img className="icons" src={iconsDiscord} alt="" /></span>
                                 <span class= "text">Discord</span>
                             </a>
