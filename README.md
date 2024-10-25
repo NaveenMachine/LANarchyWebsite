@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#LANarchy Website
+As a founding member of Ohio State’s LANarchy club, I created this website to introduce new members to our community, showcase what LANarchy is all about, and make it easy for anyone to get involved. The website features everything from event details to our unique Poster Archive, my personal favorite section, where you can browse the creative posters we’ve put up around campus to spread the word about our club.
