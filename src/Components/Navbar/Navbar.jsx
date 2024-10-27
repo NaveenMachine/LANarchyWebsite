@@ -25,7 +25,9 @@ const Navbar = () => {
           }
         }
          
-        >LANarchy</div>
+        >Lanarchy</div>
+
+
         <div className="hamburger" onClick={toggleMenu}>
             <div></div>
             <div></div>

@@ -19,7 +19,7 @@ export const Hero = () => {
     // }
     >
         <div className="hero-title">
-            <p>LANarchy Club @OSU</p>
+            <p>Lanarchy Club @OSU</p>
         </div>
         <div className="address">
             <p>Bradley Hall Basement</p>

@@ -22,6 +22,10 @@ const Officers = () => {
                 <span className='name'>Naveen Kamath.62</span>
             </li>
             <li className='officerName'>
+                <div className="position"><b>Tech Officer</b></div>
+                <span className='name'>Roshan Robinson</span>
+            </li>
+            <li className='officerName'>
                 <div className="position"><b>Advisor</b></div>
                 <span className='name'>Jesse Schotter.1</span>
             </li>
