@@ -3,7 +3,7 @@ import './Officers.css'
 const Officers = () => {
   return (
     <div className='officers'>
-        <h1>Officers</h1>
+        <h1 className='officeTitle'>Officers</h1>
         <ul>
             <li className='officerName'>
                 <div className="position"><b>President</b></div>

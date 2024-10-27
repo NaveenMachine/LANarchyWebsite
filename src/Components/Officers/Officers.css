@@ -1,6 +1,7 @@
 .officerName {
     padding-left: 2%;
     padding-right: 2%;
+    
 }
 .officers {
     height: 20%;
@@ -13,5 +14,8 @@
     border-radius: 25px;
     box-shadow: 0 2px 4px darkslategray;
     color: black;
+}
+.officeTitle{
+    font-family: Orbitron, sans-serif;
 }
 
