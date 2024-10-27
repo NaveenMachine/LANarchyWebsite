@@ -8,6 +8,7 @@ import Officers from "./Components/Officers/Officers";
 import Slider from "./Components/Slider/Slider"
 import Footer from "./Components/Footer/Footer";
 import Registration from "./Components/Registration/Registration";
+import Posters from "./Components/Posters/Posters";
 import image2 from './assets/image2.jpg'
 import image3 from './assets/image3.jpg'
 import image4 from './assets/image4.jpg'
@@ -46,6 +47,7 @@ export const App = () => {
       </div>
       <Officers/>
       <Registration/>
+      <Posters/>
       <Footer/>
       
     </div>
