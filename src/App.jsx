@@ -15,7 +15,7 @@ import image5 from './assets/image5.jpg'
 
 
 import './App.css';
-import meeleeVid from './assets/meeleeVideo.mp4'
+import meeleeVid from './assets/minecraftVid.mp4'
 
 export const App = () => {
   const [heroCount, setHeroCount] = useState(0); 
