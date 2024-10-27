@@ -5,17 +5,29 @@ import iconsInstagram from '../../assets/iconInstagramSolid.png'
 
 export const Hero = () => {
   return (
-    <div className='hero'>
+    <div className='hero'
+    // style={{
+    //     width: "100vh",
+    //     height: "100vh",
+    //     display: "flex",
+    //     justifyContent: "center",
+    //     alignItems: "center",
+    //     flexWrap: "wrap",
+    //     alignContent: "flex-start",
+    //     textAlign:"center",
+    //   }
+    // }
+    >
         <div className="hero-title">
             <p>LANarchy Club @OSU</p>
         </div>
         <div className="address">
-            <p>Baker Systems 198</p>
-            <p>Wednesdays at 7:00PM</p>
-            <p>2070 Neil Ave, Columbus, OH 43210</p>
+            <p>Bradley Hall Basement</p>
+            <p>Sundays at 6:00PM</p>
+            <p>221 W 12th Ave, Columbus, OH 43210</p>
         </div>
         <div className="contact-list">
-            <ul>
+            <ul style={{ display: "flex", gap: "3vw", justifyContent: "center", padding: 0 }}>
                 <li>
                     <div onTouchStart="">
                         <div className="button">

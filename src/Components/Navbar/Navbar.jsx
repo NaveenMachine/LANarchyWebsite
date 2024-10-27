@@ -12,7 +12,20 @@ const Navbar = () => {
   return (
     <div className='navbar'>
         <div className='nav'>
-        <div className="nav-logo">LANarchy</div>
+        <div className="nav-logo" 
+          style={{
+            width: "25vh",
+            height: "6vh",
+            display: "flex",
+            backgroundColor: "black",
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+            alignContent: "flex-start",
+          }
+        }
+         
+        >LANarchy</div>
         <div className="hamburger" onClick={toggleMenu}>
             <div></div>
             <div></div>

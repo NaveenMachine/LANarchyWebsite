@@ -18,7 +18,7 @@ const Officers = () => {
                 <span className='name'>Samuel Langer.56</span>
             </li>
             <li className='officerName'>
-                <div className="position"><b>Chief Technology Officer</b></div>
+                <div className="position"><b>Website Officer</b></div>
                 <span className='name'>Naveen Kamath.62</span>
             </li>
             <li className='officerName'>

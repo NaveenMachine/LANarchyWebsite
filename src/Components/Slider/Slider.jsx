@@ -46,7 +46,7 @@ const dotStyle = {
     cursor: "pointer",
     fontSize: "20px",
     zIndex: 1,
-    color: "#000080",
+    color: "white",
 };
 
 const Slider = ({ slides }) => {

@@ -44,7 +44,7 @@ const Footer = () => {
                 </li>
             </ul>
         </div>
-        <p>@ 2024 LANarchy. All rights reserved.</p>
+        <p style={{color:'white'}}>@ 2024 LANarchy. All rights reserved.</p>
     </div>
   )
 }
