@@ -10,7 +10,7 @@ import Smash from '../../assets/Smash.png'
 
 
 const Posters = () => {
-    const slides = [Bean,amogus, amogus2, amogus3, Halo, Duck, Smash]
+    const slides = [Bean, amogus, amogus2, amogus3, Halo, Duck, Smash]
     const containerStyles = {
         width: "700px",
         height: "900px",
