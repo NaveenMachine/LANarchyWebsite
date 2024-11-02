@@ -1,8 +1,18 @@
+import { useState, useEffect } from 'react';
 import './Officers.css'
 
 const Officers = () => {
+    const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWindowSize(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
   return (
-    <div className='officers'>
+    <div className={windowSize > 600 ? 'officersWeb' : 'officersMobile'}>
         <h1 className='officeTitle'>Officers</h1>
         <ul>
             <li className='officerName'>

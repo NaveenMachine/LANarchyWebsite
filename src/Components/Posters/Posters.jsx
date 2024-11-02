@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import './Posters.css';
 import Slider from '../Slider/Slider';
 import amogus from '../../assets/Amogus.png';
@@ -10,9 +11,19 @@ import Smash from '../../assets/Smash.png';
 
 const Posters = () => {
     const slides = [Bean, amogus, amogus2, amogus3, Halo, Duck, Smash];
+    const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWindowSize(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const containerStyles = {
-        width: "100wh",
-        height: "90vh",
+        width: windowSize > 600 ? "800px" : "370px",
+        height: windowSize > 600 ? "1100px" : "500px",
         margin: "0 auto",
     };
 

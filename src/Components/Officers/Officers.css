@@ -3,13 +3,26 @@
     padding-right: 2%;
     
 }
-.officers {
+.officersWeb {
     height: 20%;
     width: 84%;
     position: relative;
     margin-left: 8%;
     margin-bottom: 3%;
     margin-top: 3%;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px darkslategray;
+    color: black;
+}
+
+.officersMobile {
+    height: 20%;
+    width: 84%;
+    position: relative;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    margin-top: 10%;
     background-color: white;
     border-radius: 25px;
     box-shadow: 0 2px 4px darkslategray;

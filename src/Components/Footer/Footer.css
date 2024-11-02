@@ -3,10 +3,10 @@
     padding-top: 3%;
 }
 
-img {
+.logo {
     height: 4%;
     width: 4%;
-    padding-top: 1%;
+    padding-top: 20px;
     display: fixed;
     align-items: left;
     
