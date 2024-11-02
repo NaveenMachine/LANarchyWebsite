@@ -55,21 +55,36 @@ export const App = () => {
         <Hero className="caption"/> 
       </div>
       
-      <AboutUs aboutCount={aboutCount} />
+      {/* Adding id for About Us section */}
+      <section id="about-us">
+        <AboutUs aboutCount={aboutCount} />
+      </section>
 
       {windowSize > 600 ? (
-        <div style={containerStylesWeb}>
+        <div id="slider" style={containerStylesWeb}>
           <Slider slides={slides}/>
         </div>
       ) : (
-        <div style={containerStylesMobile}>
+        <div id="slider" style={containerStylesMobile}>
           <Slider slides={slides}/>
         </div>
       )}
 
-      <Officers/>
-      <Registration/>
-      <Posters/>
+      {/* Adding id for Officers section */}
+      <section id="officers">
+        <Officers />
+      </section>
+
+      {/* Adding id for Membership/Registration section */}
+      <section id="membership">
+        <Registration />
+      </section>
+
+      {/* Adding id for Posters section */}
+      <section id="posters">
+        <Posters />
+      </section>
+
       <Footer/>
     </div>
   );
