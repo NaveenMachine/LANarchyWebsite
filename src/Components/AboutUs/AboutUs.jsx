@@ -16,7 +16,7 @@ export const AboutUs = ({aboutCount}) => {
     <div className = 'aboutUs'>
         <h1 className='aboutTitle'>About Us</h1>
         <div className='container'>
-            <p className='aboutTxt'>Welcome to Lanarchy! <div> At Lanarchy, our core mission is to cultivate a vibrant gaming community on campus. We host LAN parties and tournaments, featuring popular titles like Mario Kart, Halo, and Smash Bros.</div>We’re film believers in the power of local multiplayer gaming to bring people together and forge genuine connections. Whether you're carting a console across campus or just bringing yourself, you'll find a warm welcome and a home at Lanarchy.</p>
+            <p className='aboutTxt'>Welcome to Lanarchy! <div> At Lanarchy, our core mission is to cultivate a vibrant gaming community on campus. We host LAN parties and tournaments, featuring popular titles like Mario Kart, Halo, and Smash Bros.</div>We’re firm believers in the power of local multiplayer gaming to bring people together and forge genuine connections. Whether you're carting a console across campus or just bringing yourself, you'll find a warm welcome and a home at Lanarchy.</p>
             
             <img className='photo' src={image1} alt="" />
         </div>

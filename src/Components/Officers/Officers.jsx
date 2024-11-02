@@ -23,7 +23,7 @@ const Officers = () => {
             </li>
             <li className='officerName'>
                 <div className="position"><b>Tech Officer</b></div>
-                <span className='name'>Roshan Robinson</span>
+                <span className='name'>Lance Bance</span>
             </li>
             <li className='officerName'>
                 <div className="position"><b>Advisor</b></div>

@@ -19,12 +19,12 @@ export const Hero = () => {
     // }
     >
         <div className="hero-title">
-            <p>Lanarchy Club @OSU</p>
+            <div>Lanarchy Club @OSU</div>
         </div>
         <div className="address">
-            <p>Bradley Hall Basement</p>
-            <p>Sundays at 6:00PM</p>
-            <p>221 W 12th Ave, Columbus, OH 43210</p>
+            <div>Bradley Hall Basement</div>
+            <div>Sundays at 6:00PM</div>
+            <div>221 W 12th Ave, Columbus, OH 43210</div>
         </div>
         <div className="contact-list">
             <ul style={{ display: "flex", gap: "3vw", justifyContent: "center", padding: 0 }}>

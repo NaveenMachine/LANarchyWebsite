@@ -24,9 +24,9 @@ export const App = () => {
   const [aboutCount, setAboutCount] = useState(0);
   const slides = [image2, image3, image4, image5]
   const containerStyles = {
-    width: "500px",
-    height: "280px",
-    margin: "0 auto",
+      width: "85%",
+      height: "40vh",
+      margin: "0 auto",
   };
 
   return (

@@ -3,6 +3,7 @@ import './Slider.css';
 
 const sliderStyles = {
     height: "100%",
+    width: "100%",
     position: "relative",
 };
 
@@ -18,8 +19,8 @@ const rightArrowStyles = {
     position: "absolute",
     top: "50%",
     transform: "translate(0, -50%)",
-    right: "32px",
-    fontSize: "45px",
+    right: "5%",
+    fontSize: "2vw",
     color: "#fff",
     zIndex: 1,
     cursor: "pointer",
@@ -29,8 +30,8 @@ const leftArrowStyles = {
     position: "absolute",
     top: "50%",
     transform: "translate(0, -50%)",
-    left: "32px",
-    fontSize: "45px",
+    left: "5%",
+    fontSize: "2vw",
     color: "#fff",
     zIndex: 1,
     cursor: "pointer",
@@ -39,12 +40,13 @@ const leftArrowStyles = {
 const dotsContainerStyles = {
     display: "flex",
     justifyContent: "center",
+    marginTop: "1vh",
 };
 
 const dotStyle = {
     margin: "0 3px",
     cursor: "pointer",
-    fontSize: "20px",
+    fontSize: "2vh",
     zIndex: 1,
     color: "white",
 };
@@ -74,8 +76,7 @@ const Slider = ({ slides }) => {
     };
 
     return (
-        <div style={sliderStyles} >
-            
+        <div style={sliderStyles}>
             <div onClick={goToPrevious} style={leftArrowStyles}>
                 ❰
             </div>

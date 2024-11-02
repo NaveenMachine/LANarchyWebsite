@@ -112,15 +112,16 @@ body{
 {
     .hero-title{
         color:#FFF;
-        font-size: 36px;
+        font-size: 50px;
         font-weight: 500;
         line-height: 50px;
         /*color: #FDFBD4;*/
         text-align: center;
+        padding-bottom: 3.5%;
     }
     .address{
         color:#FFF;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 500;
         line-height: 20px;
         /*color: #FDFBD4;*/
@@ -164,6 +165,9 @@ body{
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
+    }
+    .hero {
+        padding-top: 40%;
     }
 }
 
