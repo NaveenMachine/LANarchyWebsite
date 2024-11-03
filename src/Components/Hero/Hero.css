@@ -1,198 +1,214 @@
-.hero{
+.hero {
     margin: 0px 120px;
     margin-top: 10%;
 }
-.hero-title{
-    color:#FFF;
+
+.hero-title {
+    color: #FFF;
     font-size: 110px;
     font-weight: 500;
     line-height: 120%;
-    /*color: #FDFBD4;*/
     text-align: center;
 }
-.address{
-    color:#FFF;
+
+.address {
+    color: #FFF;
     font-size: 25px;
     font-weight: 500;
     line-height: 40px;
-    /*color: #FDFBD4;*/
     text-align: center;
 }
+
 ul {
     list-style-type: none;
     padding: 0;
 }
+
 li {
     display: inline-block;
 }
-body{
-    text-align:center;
-   
+
+body {
+    text-align: center;
 }
-  
-.button{
-    position:relative;
-    display:inline-block;
-    margin:20px;
-    width: 180px; /* Set the width to half */
-    height: 40px; /* Set the height to half */
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    width: 180px;
+    height: 40px;
 }
 
 .contact-list {
     text-align: center;
 }
+.addressList {
+    list-style-type: none; /* Removes the default bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Optional: centers items horizontally */
+}
 
-.button a{
+.button a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color:white;
-    font-family:Helvetica, sans-serif;
-    font-weight:bold;
-    font-size:18px; /* Adjust the font size to fit the smaller button */
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
     text-align: center;
-    text-decoration:none;
-    background-color:#FFA12B;
-    display:block;
-    position:relative;
-    padding:10px 20px; /* Adjust padding to fit the smaller button */
-    width: 100%; /* Ensure the link takes the full width of the button */
-    height: 100%; /* Ensure the link takes the full height of the button */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    
+    text-decoration: none;
+    background-color: #FFA12B;
+    display: block;
+    position: relative;
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-shadow: 0px 1px 0px #000;
     filter: dropshadow(color=#000, offx=0px, offy=1px);
-    
-    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-    
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-  
-.button a:active{
-    top:5px; /* Adjust the top position for the smaller button */
-    background-color:#F78900;
-    
-    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
-    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+
+.button a:active {
+    top: 5px;
+    background-color: #F78900;
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
 }
-  
-.button:after{
-    content:"";
-    height:100%;
-    width:100%;
-    padding:2px; /* Adjust padding for the smaller button */
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 2px;
     position: absolute;
-    bottom:-8px; /* Adjust bottom position for the smaller button */
-    left:-2px; /* Adjust left position for the smaller button */
-    z-index:-1;
-    background-color:#2B1800;
+    bottom: -8px;
+    left: -2px;
+    z-index: -1;
+    background-color: #2B1800;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-.icons{
+
+.icons {
     width: 20px;
     height: 20px;
     object-fit: contain;
     padding-top: 0px;
 }
-.button .icon {
-    margin-right: 8px; /* Space between icon and text */
-    font-size: 20px; /* Adjust icon size if necessary */
-}
-  
 
-@media screen and (max-width: 600px)
-{
-    .hero-title{
-        color:#FFF;
+.button .icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* Responsive styling for screen widths less than 600px */
+@media screen and (max-width: 600px) {
+    .hero-title {
+        color: #FFF;
         font-size: 50px;
         font-weight: 500;
         line-height: 50px;
-        /*color: #FDFBD4;*/
         text-align: center;
-        padding-bottom: 3.5%;
+        padding-bottom: 2%;
     }
-    .address{
-        color:#FFF;
+
+    /* Set each element within hero-title and address to display on a new line */
+    .hero-title div,
+    .address div {
+        display: block;
         font-size: 20px;
-        font-weight: 500;
+        line-height: 25px;
+        margin-bottom: 0;
+    }
+
+    .address {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 200;
         line-height: 20px;
-        /*color: #FDFBD4;*/
         text-align: center;
     }
-    .button{
-        position:relative;
-        display:inline-block;
-        margin:10px;
-        width: 50px; /* Set the width to half */
-        height: 30px; /* Set the height to half */
+
+    .button {
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+        width: 50px;
+        height: 30px;
     }
+
     a {
         display: inline-block;
         overflow: hidden;
     }
 
-    .button a{
-        color:white;
-        font-family:Helvetica, sans-serif;
-        font-weight:bold;
-        font-size:18px; /* Adjust the font size to fit the smaller button */
+    .button a {
+        color: white;
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
         text-align: center;
-        text-decoration:none;
-        background-color:#FFA12B;
-        display:block;
-        position:relative;
-        padding:5px 13px; /* Adjust padding to fit the smaller button */
-        width: 100%; /* Ensure the link takes the full width of the button */
-        height: 100%; /* Ensure the link takes the full height of the button */
-        box-sizing: border-box; /* Include padding and border in the element's total width and height */
-        
+        text-decoration: none;
+        background-color: #FFA12B;
+        display: block;
+        position: relative;
+        padding: 5px 13px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         text-shadow: 0px 1px 0px #000;
         filter: dropshadow(color=#000, offx=0px, offy=1px);
-        
-        -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        
+        -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+        -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+        box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
     }
+
     .hero {
         padding-top: 40%;
     }
 }
 
+/* Styling for screen widths between 600px and 900px */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-    .hero-title{
-        color:#FFF;
+    .hero-title {
+        color: #FFF;
         font-size: 110px;
         font-weight: 500;
         line-height: 130px;
-        /*color: #FDFBD4;*/
         text-align: center;
     }
-    .address{
-        color:#FFF;
+
+    .address {
+        color: #FFF;
         font-size: 25px;
         font-weight: 500;
         line-height: 40px;
-        /*color: #FDFBD4;*/
         text-align: center;
     }
-    .button{
-        position:relative;
-        display:inline-block;
-        margin:20px;
-        width: 180px; /* Set the width to half */
-        height: 40px; /* Set the height to half */
+
+    .button {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+        width: 180px;
+        height: 40px;
     }
 }

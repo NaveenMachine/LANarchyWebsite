@@ -20,18 +20,17 @@ export const AboutUs = ({ aboutCount }) => {
         width: windowSize > 1000 ? "300px" : "300px",
         height: "auto",
         margin: "0 auto",
-        
     };
 
     return (
         <div className="aboutUs">
             <h1 className="aboutTitle">About Us</h1>
             <div className={windowSize > 1000 ? "container-inline" : "container-stacked"}>
-                <p className="aboutTxt">
-                    Welcome to Lanarchy! 
-                    <div> At Lanarchy, our core mission is to cultivate a vibrant gaming community on campus. We host LAN parties and tournaments, featuring popular titles like Mario Kart, Halo, and Smash Bros.</div>
-                    We’re firm believers in the power of local multiplayer gaming to bring people together and forge genuine connections. Whether you're carting a console across campus or just bringing yourself, you'll find a warm welcome and a home at Lanarchy.
-                </p>
+                <div className="aboutTxt">
+                    <p>Welcome to Lanarchy!</p>
+                    <p>At Lanarchy, our core mission is to cultivate a vibrant gaming community on Ohio State's campus. We host LAN parties and tournaments, featuring popular titles like Mario Kart, Halo, and Smash Bros.</p>
+                    <p>We’re firm believers in the power of local multiplayer gaming to bring people together and forge genuine connections. Whether you're carting a console across campus or just bringing yourself, you'll find a warm welcome and a home at Lanarchy.</p>
+                </div>
                 <img src={image1} alt="" style={imageStyle} className="lanLogo" />
             </div>
         </div>
