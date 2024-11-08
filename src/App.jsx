@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Background } from "./Components/Background/Background";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
+import MNavBar from "./Components/MaterialNavBar/MNavBar"
 import image1 from './assets/image1Cropped.png';
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Officers from "./Components/Officers/Officers";
@@ -46,15 +47,17 @@ export const App = () => {
   }, []);
 
   return (
-    <div>
+    <div >
       <div className="video-container">
         <video autoPlay loop muted>
           <source src={meeleeVid} type='video/mp4'/>
         </video>
-        <Navbar className="caption"/>
+        {/* <Navbar className="caption"/> */}
+        <MNavBar/>
         <Hero className="caption"/> 
       </div>
       
+      <div style={{ backgroundColor: 'black'}}>
       {/* Adding id for About Us section */}
       <section id="about-us">
         <AboutUs aboutCount={aboutCount} />
@@ -86,6 +89,7 @@ export const App = () => {
       </section>
 
       <Footer/>
+      </div>
     </div>
   );
 };
