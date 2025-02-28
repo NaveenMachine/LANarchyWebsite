@@ -7,9 +7,10 @@ import image1 from './assets/image1Cropped.png';
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Officers from "./Components/Officers/Officers";
 import Slider from "./Components/Slider/Slider";
-import Footer from "./Components/Footer/Footer";
+//import Footer from "./Components/Footer/Footer";
 import Registration from "./Components/Registration/Registration";
 import Posters from "./Components/Posters/Posters";
+import Footer from "./Components/MaterialFooter/MaterialFooter"
 import image2 from './assets/image2.jpg';
 import image3 from './assets/image3.jpg';
 import image4 from './assets/image4.jpg';
@@ -53,7 +54,7 @@ export const App = () => {
           <source src={meeleeVid} type='video/mp4'/>
         </video>
         {/* <Navbar className="caption"/> */}
-        <MNavBar/>
+        <Navbar/>
         <Hero className="caption"/> 
       </div>
       
@@ -88,7 +89,10 @@ export const App = () => {
         <Posters />
       </section>
 
-      <Footer/>
+      <section id="about-us" style={{ paddingTop: "20px" }}>
+        <Footer />
+      </section>
+      
       </div>
     </div>
   );

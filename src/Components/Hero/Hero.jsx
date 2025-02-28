@@ -11,11 +11,8 @@ export const Hero = () => {
         </div>
         <div className="address">
             <ul className='addressList'>
-                <li><div>Bradley Hall Basement</div></li>
-                <li><div>Sundays at 6:00PM</div></li>
-                <li><div>221 W 12th Ave,</div></li>
-                <li><div>Columbus, OH</div></li>
-                <li><div>43210</div></li>
+                <li><div>Bradley Hall Lobby</div></li>
+                <li><div>Sundays at 6:00PM</div></li> 
             </ul>
             
             
