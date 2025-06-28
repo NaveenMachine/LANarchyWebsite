@@ -7,45 +7,76 @@ const Officers = () => {
     useEffect(() => {
         const handleResize = () => setWindowSize(window.innerWidth);
         window.addEventListener("resize", handleResize);
-
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-  return (
-    <div className={windowSize > 600 ? 'officersWeb' : 'officersMobile'}>
-        <h1 className='officeTitle'>Officers</h1>
-        <ul>
-            <li className='officerName'>
-                <div className="position"><b>President</b></div>
-                <span className='name'>Mason Bindemann</span>
-            </li>
-            <li className='officerName'>
-                <div className="position"><b>Vice President</b></div>
-                <span className='name'>Nolan Freyhof</span>
-            </li>
-            <li className='officerName'>
-                <div className="position"><b>Treasurer</b></div>
-                <span className='name'>Samuel Langer</span>
-            </li>
-            <li className='officerName'>
-                <div className="position"><b>Website Officer</b></div>
-                <span className='name'>Naveen Kamath</span>
-            </li>
-            <li className='officerName'>
-                <div className="position"><b>Community Officer</b></div>
-                <span className='name'>Lance Bance</span>
-            </li>
-            <li className='officerName'>
-                <div className="position"><b>Tech Officer</b></div>
-                <span className='name'>Roshan Robinson</span>
-            </li>
-            <li className='officerName'>
-                <div className="position"><b>Advisor</b></div>
-                <span className='name'>Jesse Schotter</span>
-            </li>
-        </ul>
-    </div>
-  )
-}
+    const officers = [
+        {
+            position: "President",
+            name: "Mason Bindemann",
+            icon: "👑",
+            description: "Leads the organization and oversees all activities"
+        },
+        {
+            position: "Vice President", 
+            name: "Nolan Freyhof",
+            icon: "🎯",
+            description: "Assists the president and manages operations"
+        },
+        {
+            position: "Treasurer",
+            name: "Samuel Langer", 
+            icon: "💰",
+            description: "Manages finances and budget planning"
+        },
+        {
+            position: "Website Officer",
+            name: "Naveen Kamath",
+            icon: "💻", 
+            description: "Maintains our online presence and digital platforms"
+        },
+        {
+            position: "Community Officer",
+            name: "Lance Bance",
+            icon: "🤝",
+            description: "Fosters community engagement and member relations"
+        },
+        {
+            position: "Tech Officer", 
+            name: "Roshan Robinson",
+            icon: "⚡",
+            description: "Handles technical setup and equipment management"
+        },
+        {
+            position: "Advisor",
+            name: "Jesse Schotter",
+            icon: "🎓",
+            description: "Provides guidance and institutional support"
+        }
+    ];
+
+    return (
+        <div className="officers-section">
+            <div className="officers-container">
+                <h1 className="officers-title">Our Leadership Team</h1>
+                <p className="officers-subtitle">Meet the dedicated officers who make Lanarchy possible</p>
+                
+                <div className="officers-grid">
+                    {officers.map((officer, index) => (
+                        <div key={index} className="officer-card" style={{ animationDelay: `${index * 0.1}s` }}>
+                            <div className="officer-icon">{officer.icon}</div>
+                            <div className="officer-info">
+                                <h3 className="officer-position">{officer.position}</h3>
+                                <h4 className="officer-name">{officer.name}</h4>
+                                <p className="officer-description">{officer.description}</p>
+                            </div>
+                            <div className="officer-card-bg"></div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default Officers;

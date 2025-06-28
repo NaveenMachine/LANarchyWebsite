@@ -1,99 +1,100 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './Slider.css';
-
-const sliderStyles = {
-    height: "100%",
-    width: "100%",
-    position: "relative",
-};
-
-const slideStyles = {
-    width: "100%",
-    height: "100%",
-    borderRadius: "10px",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-};
-
-const rightArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    right: "5%",
-    fontSize: "2vw",
-    color: "#fff",
-    zIndex: 1,
-    cursor: "pointer",
-};
-
-const leftArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    left: "5%",
-    fontSize: "2vw",
-    color: "#fff",
-    zIndex: 1,
-    cursor: "pointer",
-};
-
-const dotsContainerStyles = {
-    display: "flex",
-    justifyContent: "center",
-    marginTop: "1vh",
-};
-
-const dotStyle = {
-    margin: "0 3px",
-    cursor: "pointer",
-    fontSize: "2vh",
-    zIndex: 1,
-    color: "white",
-};
 
 const Slider = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-    const goToPrevious = () => {
+    const goToPrevious = useCallback(() => {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
         setCurrentIndex(newIndex);
-    };
+    }, [currentIndex, slides.length]);
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         const isLastSlide = currentIndex === slides.length - 1;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
-    };
+    }, [currentIndex, slides.length]);
 
     const goToSlide = (slideIndex) => {
         setCurrentIndex(slideIndex);
     };
 
-    const slideStylesWidthBackground = {
-        ...slideStyles,
-        backgroundImage: `url(${slides[currentIndex]})`,
-    };
+    // Auto-play functionality
+    useEffect(() => {
+        if (!isAutoPlaying) return;
+
+        const interval = setInterval(() => {
+            goToNext();
+        }, 4000); // Change slide every 4 seconds
+
+        return () => clearInterval(interval);
+    }, [isAutoPlaying, goToNext]);
+
+    // Pause auto-play on hover
+    const handleMouseEnter = () => setIsAutoPlaying(false);
+    const handleMouseLeave = () => setIsAutoPlaying(true);
 
     return (
-        <div style={sliderStyles}>
-            <div onClick={goToPrevious} style={leftArrowStyles}>
-                ❰
+        <div className="slider-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {/* Main Slider */}
+            <div className="slider">
+                {/* Navigation Arrows */}
+                <button className="slider-arrow slider-arrow-left" onClick={goToPrevious} aria-label="Previous slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </button>
+                
+                <button className="slider-arrow slider-arrow-right" onClick={goToNext} aria-label="Next slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </button>
+
+                {/* Slides */}
+                <div className="slides-container">
+                    {slides.map((slide, index) => (
+                        <div
+                            key={index}
+                            className={`slide ${index === currentIndex ? 'active' : ''}`}
+                            style={{
+                                backgroundImage: `url(${slide})`,
+                                transform: `translateX(${(index - currentIndex) * 100}%)`
+                            }}
+                        />
+                    ))}
+                </div>
+
+                {/* Slide Counter */}
+                <div className="slide-counter">
+                    <span className="current-slide">{currentIndex + 1}</span>
+                    <span className="slide-separator">/</span>
+                    <span className="total-slides">{slides.length}</span>
+                </div>
             </div>
-            <div onClick={goToNext} style={rightArrowStyles}>
-                ❱
-            </div>
-            <div style={slideStylesWidthBackground}></div>
-            <div style={dotsContainerStyles}>
-                {slides.map((slide, slideIndex) => (
-                    <div
-                        style={dotStyle}
+
+            {/* Dots Navigation */}
+            <div className="dots-container">
+                {slides.map((_, slideIndex) => (
+                    <button
                         key={slideIndex}
+                        className={`dot ${slideIndex === currentIndex ? 'active' : ''}`}
                         onClick={() => goToSlide(slideIndex)}
+                        aria-label={`Go to slide ${slideIndex + 1}`}
                     >
-                        ●
-                    </div>
+                        <div className="dot-fill"></div>
+                    </button>
                 ))}
+            </div>
+
+            {/* Progress Bar */}
+            <div className="progress-bar">
+                <div 
+                    className="progress-fill"
+                    style={{ width: `${((currentIndex + 1) / slides.length) * 100}%` }}
+                ></div>
             </div>
         </div>
     );

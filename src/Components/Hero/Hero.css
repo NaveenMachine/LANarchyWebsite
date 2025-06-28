@@ -1,214 +1,315 @@
+/* Modern Hero Styles */
 .hero {
     margin: 0px 120px;
     margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
+/* Neon Sign Effect for Title */
 .hero-title {
-    color: #FFF;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.neon-sign {
+    font-family: 'Orbitron', sans-serif;
     font-size: 110px;
-    font-weight: 500;
-    line-height: 120%;
-    text-align: center;
-}
-
-.address {
-    color: #FFF;
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 40px;
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    display: inline-block;
-}
-
-body {
-    text-align: center;
-}
-
-.button {
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #00d4ff,
+        0 0 10px #00d4ff,
+        0 0 15px #00d4ff,
+        0 0 20px #00d4ff,
+        0 0 35px #00d4ff,
+        0 0 40px #00d4ff,
+        0 0 50px #00d4ff,
+        0 0 75px #00d4ff;
+    animation: neon-flicker 2s infinite alternate;
+    letter-spacing: 0.1em;
     position: relative;
-    display: inline-block;
-    margin: 20px;
-    width: 180px;
-    height: 40px;
 }
 
-.contact-list {
-    text-align: center;
+.neon-sign::before {
+    content: 'Lanarchy';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ff6b6b;
+    text-shadow: 
+        0 0 5px #00d4ff,
+        0 0 10px #00d4ff,
+        0 0 15px #00d4ff,
+        0 0 20px #00d4ff,
+        0 0 35px #00d4ff,
+        0 0 40px #00d4ff,
+        0 0 50px #00d4ff,
+        0 0 75px #00d4ff;
+    animation: neon-flicker 2s infinite alternate-reverse;
+    opacity: 0.7;
+    z-index: -1;
 }
+
+@keyframes neon-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+            0 0 5px #00d4ff,
+            0 0 10px #00d4ff,
+            0 0 15px #00d4ff,
+            0 0 20px #00d4ff,
+            0 0 35px #00d4ff,
+            0 0 40px #00d4ff,
+            0 0 50px #00d4ff,
+            0 0 75px #00d4ff;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* Address Section */
+.address {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .addressList {
-    list-style-type: none; /* Removes the default bullets */
+    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    align-items: center; /* Optional: centers items horizontally */
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.button a {
-    display: inline-flex;
+.addressList li div {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.addressList li div:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Location Link Styling */
+.location-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.location-link:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.location-link::after {
+    content: '📍';
+    margin-left: 8px;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.location-link:hover::after {
+    opacity: 1;
+}
+
+/* Social Buttons */
+.contact-list {
+    text-align: center;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.social-button {
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: #ffffff;
     text-decoration: none;
-    background-color: #FFA12B;
-    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
     position: relative;
-    padding: 10px 20px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    text-shadow: 0px 1px 0px #000;
-    filter: dropshadow(color=#000, offx=0px, offy=1px);
-    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-    -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    overflow: hidden;
+    min-width: 160px;
 }
 
-.button a:active {
-    top: 5px;
-    background-color: #F78900;
-    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-    -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-}
-
-.button:after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    padding: 2px;
+.social-button::before {
+    content: '';
     position: absolute;
-    bottom: -8px;
-    left: -2px;
-    z-index: -1;
-    background-color: #2B1800;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-button:hover::before {
+    left: 100%;
+}
+
+.social-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual button colors */
+.social-button.instagram:hover {
+    background: rgba(228, 64, 95, 0.3);
+    border-color: #E4405F;
+    box-shadow: 0 10px 30px rgba(228, 64, 95, 0.3);
+}
+
+.social-button.discord:hover {
+    background: rgba(88, 101, 242, 0.3);
+    border-color: #5865F2;
+    box-shadow: 0 10px 30px rgba(88, 101, 242, 0.3);
+}
+
+.social-button.email:hover {
+    background: rgba(234, 67, 53, 0.3);
+    border-color: #EA4335;
+    box-shadow: 0 10px 30px rgba(234, 67, 53, 0.3);
 }
 
 .icons {
     width: 20px;
     height: 20px;
     object-fit: contain;
-    padding-top: 0px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
 }
 
-.button .icon {
-    margin-right: 8px;
-    font-size: 20px;
+.social-button:hover .icons {
+    transform: scale(1.2);
 }
 
-/* Responsive styling for screen widths less than 600px */
-@media screen and (max-width: 600px) {
-    .hero-title {
-        color: #FFF;
-        font-size: 50px;
-        font-weight: 500;
-        line-height: 50px;
-        text-align: center;
-        padding-bottom: 2%;
-    }
+.social-button .text {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
 
-    /* Set each element within hero-title and address to display on a new line */
-    .hero-title div,
-    .address div {
-        display: block;
-        font-size: 20px;
-        line-height: 25px;
-        margin-bottom: 0;
-    }
-
-    .address {
-        color: #FFF;
-        font-size: 20px;
-        font-weight: 200;
-        line-height: 20px;
-        text-align: center;
-    }
-
-    .button {
-        position: relative;
-        display: inline-block;
-        margin: 10px;
-        width: 50px;
-        height: 30px;
-    }
-
-    a {
-        display: inline-block;
-        overflow: hidden;
-    }
-
-    .button a {
-        color: white;
-        font-family: Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 18px;
-        text-align: center;
-        text-decoration: none;
-        background-color: #FFA12B;
-        display: block;
-        position: relative;
-        padding: 5px 13px;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        text-shadow: 0px 1px 0px #000;
-        filter: dropshadow(color=#000, offx=0px, offy=1px);
-        -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-    }
-
+/* Responsive Design */
+@media screen and (max-width: 900px) {
     .hero {
-        padding-top: 40%;
+        margin: 0px 60px;
+        margin-top: 8%;
     }
-}
 
-/* Styling for screen widths between 600px and 900px */
-@media screen and (max-width: 900px) and (min-width: 600px) {
-    .hero-title {
-        color: #FFF;
-        font-size: 110px;
-        font-weight: 500;
-        line-height: 130px;
-        text-align: center;
+    .neon-sign {
+        font-size: 80px;
     }
 
     .address {
-        color: #FFF;
-        font-size: 25px;
-        font-weight: 500;
-        line-height: 40px;
-        text-align: center;
+        font-size: 22px;
     }
 
-    .button {
-        position: relative;
-        display: inline-block;
-        margin: 20px;
-        width: 180px;
-        height: 40px;
+    .social-buttons {
+        gap: 1.5rem;
     }
+
+    .social-button {
+        padding: 0.8rem 1.5rem;
+        min-width: 140px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        margin: 0px 20px;
+        margin-top: 15%;
+        gap: 1.5rem;
+    }
+
+    .neon-sign {
+        font-size: 50px;
+    }
+
+    .address {
+        font-size: 18px;
+    }
+
+    .addressList li div {
+        padding: 0.4rem 1rem;
+        font-size: 16px;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .social-button {
+        width: 200px;
+        padding: 0.8rem 1.5rem;
+        font-size: 14px;
+    }
+
+    .icons {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Animation for hero elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.address {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.contact-list {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
 }

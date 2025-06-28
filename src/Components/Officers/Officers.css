@@ -1,3 +1,304 @@
+/* Modern Officers Section Styles - Condensed */
+.officers-section {
+    padding: 2rem 2rem;
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.officers-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+}
+
+.officers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.officers-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #00d4ff, #ff6b6b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.officers-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, #ff6b6b);
+    border-radius: 2px;
+}
+
+.officers-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+/* Officers Grid - Condensed */
+.officers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Officer Cards - Condensed */
+.officer-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.officer-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.officer-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 107, 107, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.officer-card:hover .officer-card-bg {
+    opacity: 1;
+}
+
+/* Officer Icon - Condensed */
+.officer-icon {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.officer-card:hover .officer-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Officer Info - Condensed */
+.officer-info {
+    text-align: center;
+}
+
+.officer-position {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00d4ff;
+    margin: 0 0 0.3rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.officer-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.8rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.officer-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Hover Effects */
+.officer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.officer-card:hover::before {
+    left: 100%;
+}
+
+/* Responsive Design - Condensed */
+@media (max-width: 1000px) {
+    .officers-section {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .officers-title {
+        font-size: 2rem;
+    }
+
+    .officers-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .officers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .officers-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .officers-title {
+        font-size: 1.8rem;
+    }
+
+    .officers-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .officers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .officer-card {
+        padding: 1.2rem;
+    }
+
+    .officer-icon {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .officer-position {
+        font-size: 1rem;
+    }
+
+    .officer-name {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .officer-description {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .officers-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .officers-title {
+        font-size: 1.6rem;
+    }
+
+    .officers-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .officers-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .officer-card {
+        padding: 1rem;
+    }
+
+    .officer-icon {
+        font-size: 1.8rem;
+    }
+
+    .officer-position {
+        font-size: 0.9rem;
+    }
+
+    .officer-name {
+        font-size: 1rem;
+    }
+
+    .officer-description {
+        font-size: 0.75rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered animation for cards */
+.officer-card:nth-child(1) { animation-delay: 0.1s; }
+.officer-card:nth-child(2) { animation-delay: 0.2s; }
+.officer-card:nth-child(3) { animation-delay: 0.3s; }
+.officer-card:nth-child(4) { animation-delay: 0.4s; }
+.officer-card:nth-child(5) { animation-delay: 0.5s; }
+.officer-card:nth-child(6) { animation-delay: 0.6s; }
+.officer-card:nth-child(7) { animation-delay: 0.7s; }
+
+/* Enhanced hover states */
+.officer-card:hover .officer-position {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.officer-card:hover .officer-name {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
 .officerName {
     padding-left: 2%;
     padding-right: 2%;

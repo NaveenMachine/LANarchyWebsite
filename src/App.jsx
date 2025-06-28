@@ -2,22 +2,19 @@ import { useState, useEffect } from "react";
 import { Background } from "./Components/Background/Background";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
-import MNavBar from "./Components/MaterialNavBar/MNavBar"
+//import MNavBar from "./Components/MaterialNavBar/MNavBar"
 import image1 from './assets/image1Cropped.png';
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Officers from "./Components/Officers/Officers";
 import Slider from "./Components/Slider/Slider";
-//import Footer from "./Components/Footer/Footer";
+import Footer from "./Components/Footer/Footer";
 import Registration from "./Components/Registration/Registration";
 import Posters from "./Components/Posters/Posters";
-import Footer from "./Components/MaterialFooter/MaterialFooter"
-import image2 from './assets/image2.jpg';
-import image3 from './assets/image3.jpg';
-import image4 from './assets/image4.jpg';
-import image5 from './assets/image5.jpg';
+//import Footer from "./Components/MaterialFooter/MaterialFooter"
+import projectPlusImage from './assets/LanarchyAvif/2025-02-09_ProjectPlusNight_1_web.avif';
+import haloMCCImage from './assets/LanarchyAvif/2024-10-06_HaloMCCNight_1_web.avif';
 
 import './App.css';
-import meeleeVid from './assets/minecraftVid.mp4';
 
 export const App = () => {
   const [heroCount, setHeroCount] = useState(0); 
@@ -25,7 +22,7 @@ export const App = () => {
   const [aboutCount, setAboutCount] = useState(0);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
-  const slides = [image2, image3, image4, image5];
+  const slides = [projectPlusImage, haloMCCImage];
   
   const containerStylesMobile = {
     width: "370px",
@@ -48,12 +45,9 @@ export const App = () => {
   }, []);
 
   return (
-    <div >
-      <div className="video-container">
-        <video autoPlay loop muted>
-          <source src={meeleeVid} type='video/mp4'/>
-        </video>
-        {/* <Navbar className="caption"/> */}
+    <div>
+      <div className="hero-section">
+        <Background playStatus={playStatus} heroCount={heroCount} />
         <Navbar/>
         <Hero className="caption"/> 
       </div>

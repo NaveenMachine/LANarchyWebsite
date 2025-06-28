@@ -16,8 +16,6 @@ const Posters = () => {
     useEffect(() => {
         const handleResize = () => setWindowSize(window.innerWidth);
         window.addEventListener("resize", handleResize);
-
-        // Clean up the event listener on component unmount
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
@@ -28,10 +26,14 @@ const Posters = () => {
     };
 
     return (
-        <div className="flex-container">
-            <div><h1 className='postersTitle'>Poster Archive</h1></div>
-            <div style={containerStyles}>
-                <Slider slides={slides} />
+        <div className="posters-section">
+            <div className="posters-container">
+                <h1 className="posters-title">Poster Archive</h1>
+                <p className="posters-subtitle">Check out our collection of event posters and announcements</p>
+                
+                <div className="slider-wrapper" style={containerStyles}>
+                    <Slider slides={slides} />
+                </div>
             </div>
         </div>
     );
