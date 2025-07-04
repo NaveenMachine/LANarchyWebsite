@@ -11,8 +11,14 @@ import Footer from "./Components/Footer/Footer";
 import Registration from "./Components/Registration/Registration";
 import Posters from "./Components/Posters/Posters";
 //import Footer from "./Components/MaterialFooter/MaterialFooter"
-import projectPlusImage from './assets/LanarchyAvif/2025-02-09_ProjectPlusNight_1_web.avif';
-import haloMCCImage from './assets/LanarchyAvif/2024-10-06_HaloMCCNight_1_web.avif';
+import photo1 from './assets/LanarchyAvif/Photo1.avif';
+import photo2 from './assets/LanarchyAvif/Photo2.avif';
+import photo3 from './assets/LanarchyAvif/Photo3.avif';
+import photo4 from './assets/LanarchyAvif/Photo4.avif';
+import photo5 from './assets/LanarchyAvif/Photo5.avif';
+import photo6 from './assets/LanarchyAvif/Photo6.avif';
+import photo7 from './assets/LanarchyAvif/Photo7.avif';
+import photo8 from './assets/LanarchyAvif/Photo8.avif';
 
 import './App.css';
 
@@ -22,7 +28,7 @@ export const App = () => {
   const [aboutCount, setAboutCount] = useState(0);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
-  const slides = [projectPlusImage, haloMCCImage];
+  const slides = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8];
   
   const containerStylesMobile = {
     width: "370px",
