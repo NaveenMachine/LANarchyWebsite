@@ -82,7 +82,7 @@ const Footer = () => {
                     <h4 className="contact-title">Get In Touch</h4>
                     <p className="contact-email">
                         <a href="mailto:LANarchyOSU@gmail.com">
-                            LANarchyOSU@gmail.com
+                            LanarchyOSU@gmail.com
                         </a>
                     </p>
                     <p className="contact-location">
