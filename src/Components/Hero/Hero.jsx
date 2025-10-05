@@ -14,16 +14,16 @@ export const Hero = () => {
                 <li>
                     <div>
                         <a 
-                            href="https://www.google.com/maps/place/Bradley+Hall/@39.996628,-83.0159443,17z/data=!3m1!4b1!4m6!3m5!1s0x88388ebff353c76b:0xe3c9beb51ffecc8b!8m2!3d39.996628!4d-83.0133694!16s%2Fg%2F1hm37h783?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D"
+                            href="https://www.google.com/maps/place/Busch+House/@40.0046831,-83.0118846,768m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88388ebb584787cb:0x60957a095e68ed8!8m2!3d40.0046831!4d-83.0093097!16s%2Fg%2F11clzgdbb2?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="location-link"
                         >
-                            Bradley Hall Lobby
+                            Busch House's Service Room
                         </a>
                     </div>
                 </li>
-                <li><div>Sundays at 6:00PM</div></li> 
+                <li><div>Tuesdays at 6:00PM</div></li> 
             </ul>
         </div>
         <div className="contact-list">
