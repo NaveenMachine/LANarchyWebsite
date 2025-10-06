@@ -14,12 +14,12 @@ export const Hero = () => {
                 <li>
                     <div>
                         <a 
-                            href="https://www.google.com/maps/place/Busch+House/@40.0046831,-83.0118846,768m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88388ebb584787cb:0x60957a095e68ed8!8m2!3d40.0046831!4d-83.0093097!16s%2Fg%2F11clzgdbb2?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
+                            href="https://www.google.com/maps/place/Enarson+Classroom+Digital+Union/@40.0021786,-83.0192352,768m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88388e967ae48e3d:0xb9193fab462363fe!8m2!3d40.0021786!4d-83.0166603!16s%2Fg%2F11f39l9bkm?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="location-link"
                         >
-                            Busch House's Service Room
+                            Enarson Classroom Building
                         </a>
                     </div>
                 </li>
